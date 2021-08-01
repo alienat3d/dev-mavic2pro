@@ -5,11 +5,11 @@
 // ===
 // === HEADER ===
 .header {
+  z-index: 10;
   position: fixed;
   top: 20px;
   right: 0;
   left: 0;
-  z-index: 10;
 
   &__inner {
     display: flex;
@@ -33,7 +33,13 @@
     color: $color-white;
     text-transform: uppercase;
     background-color: transparent;
+    transition: $transition-fast;
     cursor: pointer;
+
+    &:hover {
+      color: #1c1c1c;
+      background-color: $color-white;
+    }
   }
 
   &__phone {
@@ -44,11 +50,10 @@
 }
 
 .menu {
-
   &__list-item {
     display: inline-block;
 
-    & + &{
+    & + & {
       margin-left: 20px;
     }
   }
@@ -56,7 +61,70 @@
 // === / HEADER ===
 
 // === HERO ===
+.hero {
+  background-image: url("../images/hero-bg.jpg");
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(
+      45.97% 54.43% at 50% 45.57%,
+      rgba(23, 26, 28, 0) 50.28%,
+      rgba(23, 26, 28, 0.00225974) 50.29%,
+      rgba(4, 5, 5, 0.820343) 58.72%,
+      rgba(5, 5, 6, 0.792703) 80.08%,
+      #000 87.89%
+    );
+    opacity: 0.4;
+  }
 
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    @extend %sf-semibold;
+    font-size: 96px;
+    line-height: 115px;
+  }
+
+  &__image {
+    max-width: 650px;
+  }
+
+  &__text {
+    margin: 25px 0 35px;
+    max-width: 325px;
+  }
+
+  &__social-item {
+    margin: 0 25px;
+    display: inline-block;
+
+    path {
+      transition: $transition-fast;
+      cursor: pointer;
+    }
+
+    &:hover {
+      path {
+        fill-opacity: 1;
+      }
+    }
+  }
+}
 // === / HERO ===
 
 @import "media";

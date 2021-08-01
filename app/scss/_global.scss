@@ -1,4 +1,8 @@
-*, *::before, *::after {box-sizing: inherit;}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 html {
   box-sizing: border-box;
@@ -10,44 +14,70 @@ a {
   color: inherit;
 }
 
-ul, li {
+ul,
+li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   font-size: inherit;
 }
 
-body{
+body {
   position: relative;
   min-width: 320px;
   overflow-x: hidden;
   @extend %ubuntu-light;
+  font-size: 17px;
   color: $color-white;
 }
 
-.page-section{
+.page-section {
   position: relative;
-  padding: 75px 0 50px;
-  min-height: 100vh;
-  background-image: url('../images/page-bg.jpg');
+  background-image: url("../images/page-bg.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      107.54deg,
+      rgba(23, 26, 28, 0.72) 0%,
+      #5e5e57 100%
+    );
+    opacity: 0.15;
+  }
+
+  &__wrapper {
+    z-index: 1;
+    position: relative;
+    padding: 74px 0 50px;
+    min-height: 100vh;
+  }
 }
 
-.container{
+.container {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1270px;
 }
 
-.title{
+.title {
   margin-bottom: 55px;
-  padding-left: 25px;
+  padding: 200px 0 0 25px;
   @extend %sf-regular;
   font-size: 44px;
   line-height: 53px;
