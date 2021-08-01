@@ -25,6 +25,7 @@ body{
   position: relative;
   min-width: 320px;
   overflow-x: hidden;
+  @extend %ubuntu-light;
   color: $color-white;
 }
 
