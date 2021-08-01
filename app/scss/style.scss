@@ -2,9 +2,61 @@
 @import "libs";
 @import "vars";
 @import "global";
+// ===
+// === HEADER ===
+.header {
+  position: fixed;
+  top: 20px;
+  right: 0;
+  left: 0;
+  z-index: 10;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 30px;
+    @extend %ubuntu-medium;
+    font-size: 15px;
+    line-height: 17px;
+    text-transform: uppercase;
+  }
 
+  &__button {
+    margin-right: 8px;
+    border: 1px solid $color-white;
+    border-radius: 3px;
+    padding: 7px 28px 6px;
+    @extend %ubuntu-medium;
+    font-size: 15px;
+    line-height: 17px;
+    color: $color-white;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+  }
 
+  &__phone {
+    @extend %ubuntu-bold;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 
+.menu {
+
+  &__list-item {
+    display: inline-block;
+
+    & + &{
+      margin-left: 20px;
+    }
+  }
+}
+// === / HEADER ===
+
+// === HERO ===
+
+// === / HERO ===
 
 @import "media";
