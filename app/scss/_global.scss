@@ -45,7 +45,11 @@ body{
 }
 
 .title{
-
+  margin-bottom: 55px;
+  padding-left: 25px;
+  @extend %sf-regular;
+  font-size: 44px;
+  line-height: 53px;
 }
 
 .scroll-down {
