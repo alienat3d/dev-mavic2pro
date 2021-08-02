@@ -249,13 +249,13 @@
         bottom: 72px;
         width: 248px;
         height: 48px;
-        background-image: url("../images/dotted-line-1.svg");
+        background-image: url("../images/decor/dotted-line-1.svg");
       }
     }
 
     &:nth-child(3) {
       &::before {
-        background-image: url("../images/dotted-line-3.svg");
+        background-image: url("../images/decor/dotted-line-3.svg");
         top: 39px;
         right: -78px;
         width: 257px;
@@ -263,7 +263,7 @@
       }
 
       &::after {
-        background-image: url("../images/dotted-line-2.svg");
+        background-image: url("../images/decor/dotted-line-2.svg");
         top: -68px;
         right: -29px;
         width: 466px;
@@ -314,5 +314,104 @@
   }
 }
 // === / BENEFITS ===
+
+// === SPECIFICATION ===
+.specification {
+  &__title {  
+  }
+
+  &__inner {
+    padding-left: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+  }
+
+  &__item--center {
+    margin-right: -2px;
+    margin-left: -20px;
+  }
+
+  &__box {
+    position: relative;
+    margin-top: 20px;
+    width: 280px;
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &__box-1,
+  &__box-3{
+    margin-top: 60px;
+  }
+
+  &__box-1::before {
+    background-image: url("../images/decor/pointer-1.svg");
+    top: 14px;
+    right: -110px;
+    width: 230px;
+    height: 115px;
+  }
+
+  &__box-2::before {
+    background-image: url("../images/decor/pointer-2.svg");
+    top: -67px;
+    right: -314px;
+    width: 347px;
+    height: 83px;
+  }
+
+  &__box-3::before {
+    background-image: url("../images/decor/pointer-3.svg");
+    top: 13px;
+    left: -277px;
+    width: 259px;
+    height: 105px;
+  }
+
+  &__box-4::before {
+    background-image: url("../images/decor/pointer-4.svg");
+    top: -75px;
+    left: -142px;
+    width: 125px;
+    height: 91px;
+  }
+
+  &__box-1 {
+  }
+
+  &__box-2 {
+    margin-top: 100px;
+  }
+
+  &__box-3 {
+  }
+
+  &__box-4 {
+    margin-top: 120px;
+  }
+
+  &__box-title {
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 28px;
+  }
+
+  &__box-text {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  &__item-img {
+  }
+}
+// === / SPECIFICATION ===
 
 @import "media";
