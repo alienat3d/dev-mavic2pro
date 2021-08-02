@@ -401,9 +401,6 @@
 
 // === QUESTIONS ===
 .questions {
-  &__title {
-  }
-
   &__items {
     padding: 0 0 15px 25px;
     max-width: 757px;
@@ -470,5 +467,154 @@
   }
 }
 // === / QUESTIONS ===
+
+// === CONTACTS ===
+.contacts {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__info {
+    margin: 0 60px 0 55px;
+    width: 240px;
+  }
+
+  &__info-box {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  &__info-title {
+    margin: 0 0 13px;
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  &__info-phone {
+    margin-bottom: 5px;
+  }
+
+  &__info-email {
+    border-bottom: 1px solid transparent;
+    transition: $transition-fast;
+
+    &:hover {
+      border-bottom: 1px solid $color-white;
+    }
+  }
+
+  &__form {
+    margin-right: 106px;
+    width: 570px;
+  }
+
+  &__form-title {
+    margin: 0 0 13px;
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  &__form-text {
+    margin: 0 0 12px;
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  &__form-inputs-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form-input,
+  &__form-textarea {
+    border: none;
+    padding: 15px;
+    @extend %ubuntu-medium;
+    font-size: 15px;
+    line-height: 17px;
+    color: $color-white;
+    background-color: rgba(#000, 0.5);
+
+    &::placeholder {
+      color: rgba(#fff, 0.4);
+    }
+  }
+
+  &__form-input {
+    margin-bottom: 10px;
+    width: 49%;
+  }
+
+  &__form-textarea {
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 144px;
+    resize: none;
+  }
+
+  &__form-button {
+    border: 1px solid $color-white;
+    border-radius: 2px;
+    padding: 9px 15px;
+    @extend %ubuntu-bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: rgba(#171a1c, 0.72);
+    transition: $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-black;
+      background-color: $color-white;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__social-item {
+    & + & {
+      margin-top: 25px;
+    }
+
+    svg {
+      opacity: .5;
+      transition: $transition-fast;
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+// === / CONTACTS ===
+
+// === FOOTER ===
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 32px;
+  left: 0;
+  
+  &__copyright {
+    font-size: 13px;
+    line-height: 17px;
+    color: rgba(#fff, 0.64);
+    text-align: right;
+  }
+}
+// === FOOTER ===
 
 @import "media";
