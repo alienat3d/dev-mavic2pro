@@ -317,17 +317,11 @@
 
 // === SPECIFICATION ===
 .specification {
-  &__title {  
-  }
-
   &__inner {
     padding-left: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__item {
   }
 
   &__item--center {
@@ -348,7 +342,7 @@
   }
 
   &__box-1,
-  &__box-3{
+  &__box-3 {
     margin-top: 60px;
   }
 
@@ -384,14 +378,8 @@
     height: 91px;
   }
 
-  &__box-1 {
-  }
-
   &__box-2 {
     margin-top: 100px;
-  }
-
-  &__box-3 {
   }
 
   &__box-4 {
@@ -408,10 +396,79 @@
     font-size: 15px;
     line-height: 19px;
   }
-
-  &__item-img {
-  }
 }
 // === / SPECIFICATION ===
+
+// === QUESTIONS ===
+.questions {
+  &__title {
+  }
+
+  &__items {
+    padding: 0 0 15px 25px;
+    max-width: 757px;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 690px;
+    background-color: rgba(#000, 0.25);
+
+    &:nth-child(3)::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/mavic-2-pro-small-half.png");
+      width: 319px;
+      height: 125px;
+      top: -32px;
+      right: -391px;
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    margin-bottom: 4px;
+    padding: 20px 10px 20px 40px;
+    @extend %ubuntu-medium;
+    font-size: 21px;
+    line-height: 28px;
+    color: rgba(#fff, 0.8);
+    cursor: pointer;
+
+    &::after {
+      content: url("../images/icons/arrow-accordion.svg");
+      position: absolute;
+      top: 0;
+      right: -72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 72px;
+      height: 67px;
+      background-color: $color-white;
+    }
+  }
+  // FIXME: доработать плавность открытия/закрытия
+
+  &__item-text {
+    display: none;
+    margin: 0;
+    padding: 0 12px 75px 50px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  &__item.questions__item--active {
+    .questions__item-title::after {
+      transform: rotate(180deg);
+    }
+
+    .questions__item-text {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+}
+// === / QUESTIONS ===
 
 @import "media";
