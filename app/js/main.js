@@ -15,4 +15,12 @@ $(function(){
     $(this).parent().addClass("questions__item--active");
   });
   // === / ACCORDION ==
+
+  // === FULLPAGE.JS ==
+  $("#fullpage").fullpage({
+      autoScrolling: true,
+      scrollHorizontally: true,
+      sectionSelector: '.page-section',
+    });
+  // === / FULLPAGE.JS ==
 });

@@ -32,7 +32,12 @@ function styles() {
 }
 
 function scripts() {
-  return src(["app/js/main.js", "node_modules/slick-carousel/slick/slick.js"])
+  return src([
+    "app/js/main.js",
+    "node_modules/slick-carousel/slick/slick.js",
+    "node_modules/fullpage.js/dist/fullpage.js",
+    "node_modules/fullpage.js/dist/fullpage.extensions.min.js"
+  ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
     .pipe(dest("app/js/"))
