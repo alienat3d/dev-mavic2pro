@@ -167,8 +167,8 @@
   &__slider {
     max-width: 560px;
 
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       top: -15px;
       right: -17px;
@@ -176,12 +176,6 @@
       width: 100%;
       height: 100%;
     }
-  }
-
-  &__slider-item {
-  }
-
-  &__slider-image {
   }
 }
 
@@ -213,5 +207,111 @@
   right: 60px;
 }
 // === / PRODUCTS ===
+
+// === BENEFITS ===
+.benefits {
+  &__title {
+  }
+
+  &__items {
+    padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: flex-end;
+
+    &:nth-child(even) {
+      margin-left: 40px;
+      transform: translateY(25px);
+    }
+  }
+
+  &__item-1,
+  &__item-3 {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &__item-1 {
+    &::before {
+      right: -57px;
+      bottom: 73px;
+      width: 248px;
+      height: 48px;
+      background-image: url("../images/dotted-line-1.svg");
+    }
+  }
+
+  &__item-3 {
+    &::before {
+      background-image: url("../images/dotted-line-3.svg");
+      top: 44px;
+      right: -85px;
+      width: 284px;
+      height: 43px;
+    }
+
+    &::after {
+      background-image: url("../images/dotted-line-2.svg");
+      top: -70px;
+      right: -60px;
+      width: 466px;
+      height: 66px;
+    }
+  }
+
+  &__num {
+    margin-right: 10px;
+    @extend %ubuntu-bold;
+    font-size: 36px;
+    line-height: 41px;
+  }
+
+  &__img {
+    position: relative;
+    margin-right: 32px;
+    display: block;
+
+    &::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      border: 2px solid $color-white;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    width: 300px;
+  }
+
+  &__info-title {
+    margin-bottom: 10px;
+    width: 123px;
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 24px;
+  }
+
+  &__info-text {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+// === / BENEFITS ===
 
 @import "media";
