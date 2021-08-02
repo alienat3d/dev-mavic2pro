@@ -129,9 +129,6 @@
 
 // === PRODUCTS ===
 .products {
-  &__title {
-  }
-
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -210,9 +207,6 @@
 
 // === BENEFITS ===
 .benefits {
-  &__title {
-  }
-
   &__items {
     padding-left: 25px;
     display: flex;
@@ -224,50 +218,57 @@
     display: flex;
     align-items: flex-end;
 
+    // nth-child не везде уместно использовать, но именно в этой секции самый раз! (пригодится для бэкенда)
     &:nth-child(even) {
       margin-left: 40px;
       transform: translateY(25px);
     }
-  }
-
-  &__item-1,
-  &__item-3 {
-    position: relative;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+    &:nth-child(3) {
+      margin-left: 30px;
     }
-  }
-
-  &__item-1 {
-    &::before {
-      right: -57px;
-      bottom: 73px;
-      width: 248px;
-      height: 48px;
-      background-image: url("../images/dotted-line-1.svg");
-    }
-  }
-
-  &__item-3 {
-    &::before {
-      background-image: url("../images/dotted-line-3.svg");
-      top: 44px;
-      right: -85px;
-      width: 284px;
-      height: 43px;
+    &:nth-child(4) {
+      margin-left: 60px;
     }
 
-    &::after {
-      background-image: url("../images/dotted-line-2.svg");
-      top: -70px;
-      right: -60px;
-      width: 466px;
-      height: 66px;
+    &:first-child,
+    &:nth-child(3) {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        right: -53px;
+        bottom: 72px;
+        width: 248px;
+        height: 48px;
+        background-image: url("../images/dotted-line-1.svg");
+      }
+    }
+
+    &:nth-child(3) {
+      &::before {
+        background-image: url("../images/dotted-line-3.svg");
+        top: 39px;
+        right: -78px;
+        width: 257px;
+        height: 43px;
+      }
+
+      &::after {
+        background-image: url("../images/dotted-line-2.svg");
+        top: -68px;
+        right: -29px;
+        width: 466px;
+        height: 67px;
+      }
     }
   }
 
