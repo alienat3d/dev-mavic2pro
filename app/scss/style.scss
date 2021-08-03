@@ -52,11 +52,19 @@
 .menu {
   &__list-item {
     display: inline-block;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: $transition-regular;
 
     & + & {
       margin-left: 20px;
     }
+
+    &.active {
+    border-bottom: 1px solid $color-white;
+    }
   }
+
 
   &__list-phone {
     display: none;

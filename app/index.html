@@ -13,13 +13,15 @@
   <!-- === HEADER === -->
   <header class="header">
     <div class="container">
-      <div class="header__inner">
-        <a class="logo" href="/">
-          <picture class="logo__img">
-            <source srcset="images/logo-mobile.png" media="(max-width: 600px)">
-            <img src="images/logo.png" alt="логотип">
-          </picture>
-        </a>
+      <div id="headerNav" class="header__inner">
+        <div class="logo__wrapper" data-menuanchor="hero">
+          <a class="logo" href="#hero">
+            <picture class="logo__img">
+              <source srcset="images/logo-mobile.png" media="(max-width: 600px)">
+              <img src="images/logo.png" alt="логотип">
+            </picture>
+          </a>
+        </div>
         <nav class="menu">
           <button class="menu__button">
             <span class="menu__button-line"></span>
@@ -30,22 +32,22 @@
                 О ДРОНЕ
               </a>
             </li>
-            <li class="menu__list-item" data-menuanchor="">
+            <li class="menu__list-item" data-menuanchor="benefits">
               <a class="menu__list-link" href="#benefits">
                 ПРЕИМУЩЕСТВА
               </a>
             </li>
-            <li class="menu__list-item">
+            <li class="menu__list-item" data-menuanchor="specification">
               <a class="menu__list-link" href="#specification">
                 ХАРАКТЕРИСТИКИ
               </a>
             </li>
-            <li class="menu__list-item">
+            <li class="menu__list-item" data-menuanchor="questions">
               <a class="menu__list-link" href="#questions">
                 ВОПРОСЫ
               </a>
             </li>
-            <li class="menu__list-item">
+            <li class="menu__list-item" data-menuanchor="contacts">
               <a class="menu__list-link" href="#contacts">
                 КОНТАКТЫ
               </a>
@@ -69,7 +71,7 @@
   <main id="fullpage">
 
   <!-- === HERO === -->
-  <section class="hero page-section">
+  <section class="hero page-section" data-anchor="hero">
     <div class="hero__wrapper page-section__wrapper">
       <div class="container">
         <div class="hero__inner">
@@ -129,7 +131,7 @@
   <!-- === / HERO === -->
 
   <!-- === PRODUCTS === -->
-  <section id="products" class="products page-section">
+  <section class="products page-section" data-anchor="products">
     <div class="page-section__wrapper">
       <div class="container">
         <h3 class="products__title title">
@@ -192,7 +194,7 @@
   <!-- === / PRODUCTS === -->
 
   <!-- === BENEFITS === -->
-  <section id="benefits" class="benefits page-section">
+  <section class="benefits page-section" data-anchor="benefits">
     <div class="page-section__wrapper">
       <div class="container">
         <h3 class="benefits__title title">
@@ -284,7 +286,7 @@
   <!-- === / BENEFITS === -->
 
   <!-- === / SPECIFICATION === -->
-  <section id="specification" class="specification page-section">
+  <section class="specification page-section" data-anchor="specification">
     <div class="page-section__wrapper">
       <div class="container">
         <h3 class="specification__title title">
@@ -356,7 +358,7 @@
   <!-- === / SPECIFICATION === -->
 
   <!-- === QUESTIONS === -->
-  <section id="questions" class="questions page-section">
+  <section class="questions page-section" data-anchor="questions">
     <div class="page-section__wrapper">
       <div class="container">
         <h3 class="questions__title title">
@@ -419,7 +421,7 @@
   <!-- === / QUESTIONS === -->
 
   <!-- === CONTACTS === -->
-  <section id="contacts" class="contacts page-section">
+  <section class="contacts page-section" data-anchor="contacts">
     <div class="page-section__wrapper">
       <div class="container">
         <h3 class="contacts__title title">

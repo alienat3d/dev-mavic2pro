@@ -18,10 +18,19 @@ $(function(){
 
   // === FULLPAGE.JS ==
   $("#fullpage").fullpage({
-      autoScrolling: true,
-      scrollHorizontally: true,
-      sectionSelector: '.page-section',
-      scrollOverflow: true
-    });
+    autoScrolling: true,
+    scrollHorizontally: true,
+    sectionSelector: ".page-section",
+    scrollOverflow: true,
+    menu: "#headerNav",
+    anchors: [
+      "hero",
+      "products",
+      "benefits",
+      "specification",
+      "questions",
+      "contacts",
+    ],
+  });
   // === / FULLPAGE.JS ==
 });
