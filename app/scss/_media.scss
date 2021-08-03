@@ -69,3 +69,17 @@
     margin-right: 0;
   }
 }
+
+@media (max-width: 540px) {
+  .hero__title{
+    display: none;
+  }
+
+  .hero__text{
+    margin: 15px 0 30%;
+  }
+
+  .scroll-down{
+    padding: 13px 0;
+  }
+}
