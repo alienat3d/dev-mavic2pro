@@ -33,4 +33,18 @@ $(function(){
     ],
   });
   // === / FULLPAGE.JS ==
+
+  // === BURGER MENU ==
+  $(".menu__button").on("click", function () {
+    $(".menu__button").toggleClass("menu__button--active");
+    $(".menu__list").toggleClass("menu__list--active");
+    
+  });
+
+  $(".menu__list-link").on("click", function () {
+    $(".menu__button").removeClass("menu__button--active");
+    $(".menu__list").removeClass("menu__list--active");
+    
+  });
+  // === / BURGER MENU ==
 });
