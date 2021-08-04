@@ -72,7 +72,6 @@
   .benefits__item {
     width: 45%;
   }
-  // TODO: уменьшать и дальше линии пока это перестанет быть целесообразным
   .benefits__item:first-child::before {
     right: -69px;
     bottom: 75px;
@@ -219,7 +218,6 @@
     padding-right: 20px;
   }
 
-  // FIXME: maybe delete later, check the TODO above
   .benefits__item:first-child::before,
   .benefits__item:nth-child(3)::after,
   .benefits__item:nth-child(3)::before {
@@ -363,16 +361,16 @@
   }
 
   .benefits__img {
+    margin-right: 0;
     img {
       display: block;
-      margin-left: auto;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin: 25px auto 25px 0;
+      width: 80%;
     }
   }
 
   .benefits__img::before {
-    width: 41%;
+    display: none;
   }
 
   .benefits__num {
@@ -380,6 +378,18 @@
   }
 }
 // === / MAX-WIDTH 540 ===
+
+// === MAX-WIDTH 375 ===
+@media (max-width: 375px) {
+  .benefits__info {
+    width: 94%;
+  }
+
+  .benefits__img img {
+    width: 90%;
+  }
+}
+// === / MAX-WIDTH 375 ===
 
 // === MAX-HEIGHT 375 ===
 @media (max-height: 375px) {
