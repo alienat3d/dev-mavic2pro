@@ -64,6 +64,31 @@
       padding: 60px 0 0;
     }
   }
+
+  .specification {
+    .page-section__wrapper {
+      padding: 34px 0 0;
+    }
+  }
+
+  .specification__title {
+    padding: 40px 0 0 0;
+    margin-bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+
+  .specification__inner {
+    padding-left: 0;
+  }
+
+  .specification__box-2 {
+    margin-top: 77px;
+  }
+
+  .specification__box-4 {
+    margin-top: 100px;
+  }
 }
 // === / MAX-WIDTH 1366 ===
 
@@ -72,16 +97,35 @@
   .benefits__item {
     width: 45%;
   }
+
   .benefits__item:first-child::before {
     right: -69px;
     bottom: 75px;
   }
+
   .benefits__item:nth-child(3)::before {
     top: 59px;
     right: -91px;
   }
+
+  .specification__item-img {
+    margin-left: 5%;
+    width: 90%;
+  }
 }
 // === / MAX-WIDTH 1280 ===
+
+// ===  MAX-WIDTH 1180 ===
+@media (max-width: 1180px) {
+  .specification__box-2::before {
+    right: -274px;
+  }
+
+  .specification__box-1::before {
+    right: -106px;
+  }
+}
+// === / MAX-WIDTH 1180 ===
 
 // === MAX-WIDTH 1100 ===
 @media (max-width: 1100px) {
@@ -241,6 +285,28 @@
     margin-left: 200px;
     transform: translateY(0);
   }
+
+  .specification__box-1::before {
+    top: 12px;
+    right: -154px;
+  }
+
+  .specification__box-2::before {
+    top: -61px;
+    right: -222px;
+    height: 80px;
+  }
+
+  .specification__box-3::before {
+    width: 199px;
+    left: -228px;
+  }
+
+  .specification__box-4::before {
+    top: -71px;
+    left: -125px;
+    width: 110px;
+  }
 }
 // === / MAX-WIDTH 1100 ===
 
@@ -258,6 +324,13 @@
     right: 2px;
     font-size: 20px;
     line-height: 22px;
+  }
+
+  .specification__box-1::before,
+  .specification__box-2::before,
+  .specification__box-3::before,
+  .specification__box-4::before {
+    display: none;
   }
 }
 // === / MAX-WIDTH 1024 ===
@@ -284,6 +357,15 @@
 }
 // === / MAX-WIDTH 940 ===
 
+// === MAX-WIDTH 877 ===
+@media (max-width: 877px) {
+  .specification__box-2, 
+  .specification__box-4 {
+    margin-top: 50px;
+  }
+}
+// === / MAX-WIDTH 877 ===
+
 // === MAX-WIDTH 787 ===
 @media (max-width: 787px) {
   .benefits__info {
@@ -298,6 +380,29 @@
   .benefits__item:nth-child(3) {
     margin-left: 0;
   }
+
+  .specification__inner{
+    display: block;
+  }
+
+  .specification__box{
+    width: 100%;
+  }
+
+    .specification__box-2, 
+  .specification__box-4 {
+    margin-top: 25px;
+  }
+
+.specification__item--center {
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+}
+
+  .specification__item-img {
+    margin: 9% auto 0;
+}
 }
 // === / MAX-WIDTH 787 ===
 
