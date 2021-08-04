@@ -380,6 +380,16 @@
   .products__slider-box {
     padding-bottom: 80px;
   }
+
+  .contacts__inner {
+    flex-wrap: wrap;
+  }
+
+  .contacts__form {
+    order: 1px;
+    margin-right: 0;
+    width: 100%;
+  }
 }
 // === / MAX-WIDTH 940 ===
 
@@ -439,8 +449,12 @@
     padding-left: 0;
   }
 
-  .questions__item-text{
+  .questions__item-text {
     padding: 0 15px 40px 30px;
+  }
+
+  .contacts__inner{
+    padding-left: 0;
   }
 }
 // === / MAX-WIDTH 787 ===
@@ -525,20 +539,38 @@
 
 // === MAX-WIDTH 414 ===
 @media (max-width: 414px) {
-  .questions__items{
+  .questions__items {
     padding-right: 0;
   }
-  
-// TODO: можно ещё уменьшить кнопочки, текст и т.п.
-  .questions__item-title{
+
+  // TODO: можно ещё уменьшить кнопочки, текст и т.п.
+  .questions__item-title {
     padding: 15px 75px 15px 15px;
   }
-  
-  .questions__item-title::after{
+
+  .questions__item-title::after {
     right: 0;
+  }
+
+  .contacts__form-inputs-box{
+    display: block;
+  }
+
+  .contacts__form-input{
+    width: 100%;
   }
 }
 // === / MAX-WIDTH 414 ===
+
+// === MAX-WIDTH 400 ===
+@media (max-width: 400px) {
+  .contacts__social-list{
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }  
+}
+// === / MAX-WIDTH 400 ===
 
 // === MAX-WIDTH 375 ===
 @media (max-width: 375px) {
